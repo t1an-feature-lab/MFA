@@ -1,6 +1,9 @@
 import { serve } from '@hono/node-server'
 import { app } from './app.js'
+import { initializeDatabase } from './db.js'
 
-serve({ fetch: app.fetch, port: 3000 }, ({ port }) => {
+await initializeDatabase()
+
+serve({ fetch: app.fetch, port: 3100 }, ({ port }) => {
   console.log(`Server is running at http://localhost:${port}`)
 })

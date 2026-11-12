@@ -1,0 +1,41 @@
+.orders-page {
+  font-size: var(--text-body-size-medium);
+  line-height: var(--text-body-lineHeight-medium);
+}
+
+.orders-toolbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.orders-table {
+  overflow-x: auto;
+}
+
+.orders-table table {
+  --table-font-size: var(--text-body-size-medium);
+  line-height: var(--base-size-20);
+  min-width: 780px;
+}
+
+.order-cell {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--base-size-4);
+}
+
+.order-muted {
+  color: var(--fgColor-muted);
+}
+
+.order-product-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order-amount {
+  align-items: flex-end;
+  font-variant-numeric: tabular-nums;
+}

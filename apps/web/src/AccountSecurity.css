@@ -1,0 +1,176 @@
+.account-security {
+  display: grid;
+  gap: var(--base-size-16);
+}
+
+.account-security,
+.account-security-dialog {
+  font-size: var(--text-body-size-medium);
+  line-height: var(--text-body-lineHeight-medium);
+}
+
+.account-password-form {
+  width: 100%;
+  max-width: 360px;
+  margin-top: var(--base-size-8);
+}
+
+.account-security-methods {
+  border: var(--borderWidth-thin) solid var(--borderColor-default);
+  border-radius: var(--borderRadius-medium);
+  background: var(--bgColor-default);
+}
+
+.account-security-methods-header {
+  padding: var(--base-size-12) var(--base-size-16);
+  border-bottom: var(--borderWidth-thin) solid var(--borderColor-default);
+  border-radius: var(--borderRadius-medium) var(--borderRadius-medium) 0 0;
+  background: var(--bgColor-muted);
+}
+
+.account-security-methods-header h2 {
+  margin: 0;
+  font-size: var(--text-title-size-small);
+  line-height: var(--text-body-lineHeight-medium);
+}
+
+.account-security-method-copy h3 {
+  margin: 0;
+  font-size: var(--text-body-size-medium);
+  line-height: var(--text-body-lineHeight-medium);
+}
+
+.account-security-method {
+  display: grid;
+  grid-template-columns: var(--base-size-24) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--base-size-16);
+  padding: var(--base-size-16);
+}
+
+.account-security-method + .account-security-method {
+  border-top: var(--borderWidth-thin) solid var(--borderColor-default);
+}
+
+.account-security-method-icon {
+  align-self: start;
+  color: var(--fgColor-muted);
+}
+
+.account-security-method-copy {
+  min-width: 0;
+}
+
+.account-security-method p {
+  margin: var(--base-size-4) 0 0;
+  color: var(--fgColor-muted);
+}
+
+.account-security-method .account-security-credential {
+  color: var(--fgColor-default);
+  overflow-wrap: anywhere;
+}
+
+.account-security-method > button {
+  justify-self: start;
+}
+
+.account-security-instructions {
+  margin: 0;
+  color: var(--fgColor-muted);
+}
+
+.account-security-toast {
+  position: fixed;
+  top: var(--base-size-24);
+  left: 50%;
+  z-index: var(--zIndex-popover);
+  width: min(360px, calc(100vw - var(--base-size-32)));
+  transform: translateX(-50%);
+  color: var(--fgColor-default);
+  font-family: var(--fontStack-system);
+  font-size: var(--text-body-size-medium);
+  line-height: var(--text-body-lineHeight-medium);
+}
+
+.account-security-toast > section {
+  align-items: center;
+  width: 100%;
+  box-shadow: var(--shadow-floating-small);
+}
+
+.account-security-demo-key {
+  display: grid;
+  gap: var(--base-size-8);
+  padding: var(--base-size-16);
+  border: var(--borderWidth-thin) solid var(--borderColor-default);
+  border-radius: var(--borderRadius-medium);
+  background: var(--bgColor-muted);
+}
+
+.account-security-demo-key > span {
+  font-weight: var(--base-text-weight-semibold);
+}
+
+.account-security-demo-key > code {
+  overflow-wrap: anywhere;
+}
+
+.authenticator-otp {
+  width: 100%;
+  max-width: 280px;
+  cursor: text;
+}
+
+.authenticator-otp-slots {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--base-size-8);
+  width: 100%;
+}
+
+.authenticator-otp-slot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--base-size-44);
+  border: var(--borderWidth-thin) solid var(--control-borderColor-rest);
+  border-radius: var(--borderRadius-medium);
+  background: var(--bgColor-default);
+  color: var(--fgColor-default);
+  box-shadow: var(--shadow-inset);
+  font-family: var(--fontStack-monospace);
+  font-size: var(--text-title-size-medium);
+  font-variant-numeric: tabular-nums;
+}
+
+.authenticator-otp-slot[data-active='true'] {
+  border-color: var(--borderColor-accent-emphasis);
+  outline: var(--borderWidth-thick) solid var(--borderColor-accent-emphasis);
+  outline-offset: -1px;
+}
+
+.authenticator-otp-slot[data-invalid='true'] {
+  border-color: var(--borderColor-danger-emphasis);
+  outline-color: var(--borderColor-danger-emphasis);
+}
+
+.authenticator-otp-caret {
+  position: absolute;
+  width: 1px;
+  height: var(--base-size-20);
+  background: var(--fgColor-default);
+}
+
+@media (max-width: 767px) {
+  .account-security-method {
+    align-items: start;
+    grid-template-columns: var(--base-size-24) minmax(0, 1fr);
+    row-gap: var(--base-size-12);
+  }
+
+  .account-security-method > button {
+    grid-column: 2;
+  }
+}

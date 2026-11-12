@@ -5,3 +5,149 @@
 body {
   margin: 0;
 }
+
+.auth-page {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100svh;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--base-size-32) var(--base-size-16);
+  font-size: var(--text-body-size-medium);
+  background: var(--bgColor-default);
+}
+
+.auth-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-size-16);
+  width: 100%;
+  max-width: 308px;
+}
+
+.login-page {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--base-size-24);
+}
+
+.auth-panel {
+  padding: var(--base-size-16);
+  background: var(--bgColor-muted);
+  border: var(--borderWidth-thin) solid var(--borderColor-default);
+  border-radius: var(--borderRadius-medium);
+}
+
+.auth-info {
+  width: 100%;
+  max-width: 640px;
+}
+
+.auth-requirements {
+  margin: 0;
+  padding-inline-start: var(--base-size-20);
+}
+
+.auth-requirements li + li {
+  margin-top: var(--base-size-4);
+}
+
+.admin-shell {
+  min-height: 100svh;
+  font-size: var(--text-body-size-medium);
+  background: var(--bgColor-default);
+}
+
+.admin-layout {
+  min-height: 100svh;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.admin-layout .admin-sidebar-region {
+  top: 0;
+  height: 100svh;
+}
+
+.admin-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-size-16);
+  height: 100%;
+  padding: var(--base-size-16);
+  background: var(--bgColor-default);
+}
+
+.admin-layout .admin-content {
+  padding: var(--base-size-32);
+}
+
+.admin-content .admin-page-title {
+  font-size: var(--base-size-24);
+  font-weight: var(--base-text-weight-normal);
+  line-height: 1.5;
+}
+
+.admin-account {
+  margin-top: auto;
+  padding-top: var(--base-size-16);
+  border-top: var(--borderWidth-thin) solid var(--borderColor-default);
+}
+
+.admin-account-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  text-align: start;
+}
+
+.admin-account-role {
+  color: var(--fgColor-muted);
+  font-size: var(--text-body-size-small);
+  font-weight: var(--base-text-weight-normal);
+}
+
+.admin-mobile-dialog .admin-sidebar {
+  padding: 0;
+}
+
+.admin-mobile-dialog-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.permissions-table {
+  overflow-x: auto;
+}
+
+.permissions-table table {
+  --table-font-size: var(--text-body-size-medium);
+  line-height: var(--base-size-20);
+}
+
+.permissions-table select {
+  font-family: inherit;
+}
+
+.permissions-table .permissions-role-select {
+  width: 120px;
+  flex-shrink: 0;
+  font-size: var(--text-body-size-medium);
+}
+
+.permissions-role-select select {
+  padding-inline-end: var(--base-size-24);
+}
+
+.permissions-password {
+  max-width: 240px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  .admin-layout .admin-content {
+    padding: var(--base-size-24) var(--base-size-16);
+  }
+}
