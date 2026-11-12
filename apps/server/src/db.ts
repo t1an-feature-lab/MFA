@@ -1,0 +1,17 @@
+import { Pool } from 'pg'
+
+const connectionString = process.env.DATABASE_URL
+
+if (!connectionString) {
+  throw new Error('DATABASE_URL is required')
+}
+
+export const pool = new Pool({
+  connectionString,
+  connectionTimeoutMillis: 5000,
+  query_timeout: 5000,
+})
+
+pool.on('error', (error) => {
+  console.error('Unexpected PostgreSQL connection error', error.message)
+})
